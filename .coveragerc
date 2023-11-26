@@ -1,6 +1,9 @@
+[run]
+relative_files = True
+
 [report]
 include =
-    src/pas.plugins/*
+    */src/pas/*
 omit =
     */test*
     */upgrades/*
