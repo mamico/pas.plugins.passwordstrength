@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Installer for the pas.plugins.passwordstrength package."""
 
 from setuptools import find_packages
@@ -21,6 +20,7 @@ setup(
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
     classifiers=[
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
@@ -49,13 +49,13 @@ setup(
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     install_requires=[
         "setuptools",
         # -*- Extra requirements: -*-
         "z3c.jbot",
         "plone.api>=1.8.4",
-        "plone.app.dexterity",
+        "plone.base",
     ],
     extras_require={
         "test": [
@@ -64,7 +64,7 @@ setup(
             # Remove if your package shall be part of coredev.
             # plone_coredev tests as of 2016-04-01.
             "plone.testing>=5.0.0",
-         ],
+        ],
     },
     entry_points="""
     [z3c.autoinclude.plugin]

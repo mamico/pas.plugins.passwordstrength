@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Setup tests for this package."""
 from pas.plugins.passwordstrength.testing import (  # noqa: E501
     PAS_PLUGINS_PASSWORDSTRENGTH_INTEGRATION_TESTING,
