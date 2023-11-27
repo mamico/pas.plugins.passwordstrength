@@ -1,7 +1,19 @@
-graft src/pas.plugins
+graft src/pas
 graft docs
-include *.md
-exclude tox.ini
-exclude *.txt
-exclude .gitlab-ci.yml
 global-exclude *.pyc
+include *.md
+include *.txt
+include *.yaml
+include .coveragerc
+include Makefile
+recursive-include tests *.py
+recursive-include tests *.gitkeep
+recursive-include tests *.json
+recursive-include tests *.yml
+# --
+include *.yml
+include base.cfg
+include bobtemplate.cfg
+include buildout.cfg
+include test_plone52.cfg
+include test_plone60.cfg

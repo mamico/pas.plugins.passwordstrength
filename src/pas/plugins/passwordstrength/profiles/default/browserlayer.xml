@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <layers>
-  <layer
-      name="pas.plugins.passwordstrength"
-      interface="pas.plugins.passwordstrength.interfaces.IPasPluginsPasswordstrengthLayer"
-      />
+  <layer interface="pas.plugins.passwordstrength.interfaces.IPasPluginsPasswordstrengthLayer"
+         name="pas.plugins.passwordstrength"
+  />
 </layers>

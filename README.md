@@ -18,10 +18,13 @@ Adds verification rules for user passwords in plone.
 
 ## Features
 
--   Can be bullet points
+## TODO
 
-Evaluate libraries like <https://pypi.org/project/password-validator/>
-or <https://pypi.org/project/zxcvbn/> for password strength
+* [ ] evaluate libraries like <https://pypi.org/project/password-validator/>
+      or <https://pypi.org/project/zxcvbn/> for password strength,
+* [ ] avoid password reuse, memoizing last password hashes,
+* [ ] manage password expire
+* [ ] force password reset
 
 ## Examples
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from pas.plugins.passwordstrength import logger
 from pas.plugins.passwordstrength import PLUGIN_ID
 from pas.plugins.passwordstrength.plugins import PasswordStrength
@@ -8,7 +7,7 @@ from zope.interface import implementer
 
 
 @implementer(INonInstallable)
-class HiddenProfiles(object):
+class HiddenProfiles:
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
         return [
