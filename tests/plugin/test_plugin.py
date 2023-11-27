@@ -15,10 +15,10 @@ class TestPlugin:
     @pytest.mark.parametrize(
         "property,expected",
         [
-            ("create_user", True),
-            ("create_ticket", True),
+            # ("p1_re", True),
+            ("p1_err", "Minimum 8 characters"),
         ],
     )
     def test_plugin_setup(self, property, expected):
         plugin = self.plugin
-        assert plugin.getProperty(property) is expected
+        assert plugin.getProperty(property) == expected

@@ -3,7 +3,8 @@ from zope.i18nmessageid import MessageFactory
 
 import logging
 
-
-_ = MessageFactory("pas.plugins.passwordstrength")
-logger = logging.getLogger("pas.plugins.passwordstrength")
 PLUGIN_ID = "passwordstrength_policy"
+PACKAGE_NAME = "pas.plugins.passwordstrength"
+
+_ = MessageFactory(PACKAGE_NAME)
+logger = logging.getLogger(PACKAGE_NAME)

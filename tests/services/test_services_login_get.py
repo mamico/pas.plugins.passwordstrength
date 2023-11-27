@@ -6,11 +6,11 @@ class TestServiceLoginGet:
     def _initialize(self, api_anon_request):
         self.api_session = api_anon_request
 
-    def test_login_get_available(self):
-        response = self.api_session.get("@login")
-        assert response.status_code == 200
-        data = response.json()
-        assert isinstance(data, dict)
+    # def test_login_get_available(self):
+    #     response = self.api_session.get("@login")
+    #     assert response.status_code == 200
+    #     data = response.json()
+    #     assert isinstance(data, dict)
 
     # @pytest.mark.parametrize(
     #     "idx, key, expected",

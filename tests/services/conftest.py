@@ -4,11 +4,9 @@ from plone.app.testing import SITE_OWNER_PASSWORD
 from plone.app.testing import TEST_USER_NAME
 from plone.app.testing import TEST_USER_PASSWORD
 from plone.restapi.testing import RelativeSession
-from urllib.parse import urlparse
 from zope.component.hooks import setSite
 
 import pytest
-import requests
 import transaction
 
 
@@ -18,11 +16,12 @@ def app(restapi):
 
 
 @pytest.fixture()
-def portal(restapi, keycloak):
+def portal(restapi):
     portal = restapi["portal"]
     setSite(portal)
     # plugin = portal.acl_users.passwordstrength_policy
     transaction.commit()
+    yield portal
 
 
 @pytest.fixture()
@@ -59,23 +58,3 @@ def api_manager_request(request_api_factory):
     request.auth = (SITE_OWNER_NAME, SITE_OWNER_PASSWORD)
     yield request
     request.auth = ()
-
-
-@pytest.fixture()
-def keycloak_login():
-    def func(url: str):
-        session = requests.Session()
-        resp = session.get(url)
-        soup = BeautifulSoup(resp.content)
-        data = {
-            "username": TEST_USER_NAME,
-            "password": TEST_USER_PASSWORD,
-            "credentialId": "",
-        }
-        next_url = soup.find("form", attrs={"id": "kc-form-login"})["action"]
-        resp = session.post(next_url, data=data, allow_redirects=False)
-        location = resp.headers["Location"]
-        qs = urlparse(location).query
-        return qs
-
-    return func

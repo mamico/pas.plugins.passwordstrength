@@ -6,6 +6,7 @@ from plone.app.testing import PloneSandboxLayer
 from plone.testing.zope import WSGI_SERVER_FIXTURE
 
 import pas.plugins.passwordstrength
+import plone.restapi
 
 
 class TestLayer(PloneSandboxLayer):
@@ -15,6 +16,7 @@ class TestLayer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
+        self.loadZCML(package=plone.restapi)
         self.loadZCML(package=pas.plugins.passwordstrength)
 
     def setUpPloneSite(self, portal):

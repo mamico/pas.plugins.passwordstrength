@@ -16,20 +16,10 @@ def app(functional):
 
 
 @pytest.fixture()
-def portal(functional, keycloak):
+def portal(functional):
     portal = functional["portal"]
     setSite(portal)
-    plugin = portal.acl_users.passwordstrength
-    with api.env.adopt_roles(["Manager", "Member"]):
-        for key, value in keycloak.items():
-            setattr(plugin, key, value)
-    transaction.commit()
-    yield portal
-    with api.env.adopt_roles(["Manager", "Member"]):
-        for key, value in keycloak.items():
-            if key != "scope":
-                value = ""
-            setattr(plugin, key, value)
+    # plugin = portal.acl_users.passwordstrength
     transaction.commit()
 
 
