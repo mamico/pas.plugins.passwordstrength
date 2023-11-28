@@ -1,16 +1,17 @@
-[![image](https://github.com/collective/pas.plugins.passwordstrength/actions/workflows/plone-package.yml/badge.svg)](https://github.com/collective/pas.plugins.passwordstrength/actions/workflows/plone-package.yml)
+[![PyPI](https://img.shields.io/pypi/v/pas.plugins.passwordstrength)](https://pypi.org/project/pas.plugins.passwordstrength/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pas.plugins.passwordstrength)](https://pypi.org/project/pas.plugins.passwordstrength/)
+[![PyPI - Wheel](https://img.shields.io/pypi/wheel/pas.plugins.passwordstrength)](https://pypi.org/project/pas.plugins.passwordstrength/)
+[![PyPI - License](https://img.shields.io/pypi/l/pas.plugins.passwordstrength)](https://pypi.org/project/pas.plugins.passwordstrength/)
+[![PyPI - Status](https://img.shields.io/pypi/status/pas.plugins.passwordstrength)](https://pypi.org/project/pas.plugins.passwordstrength/)
 
-[![Coveralls](https://coveralls.io/repos/github/collective/pas.plugins.passwordstrength/badge.svg?branch=main)](https://coveralls.io/github/collective/pas.plugins.passwordstrength?branch=main)
 
-[![image](https://codecov.io/gh/collective/pas.plugins.passwordstrength/branch/master/graph/badge.svg)](https://codecov.io/gh/collective/pas.plugins.passwordstrength)
+[![PyPI - Plone Versions](https://img.shields.io/pypi/frameworkversions/plone/pas.plugins.passwordstrength)](https://pypi.org/project/pas.plugins.passwordstrength/)
 
-[![Latest Version](https://img.shields.io/pypi/v/pas.plugins.passwordstrength.svg)](https://pypi.python.org/pypi/pas.plugins.passwordstrength/)
+[![Meta](https://github.com/mamico/pas.plugins.passwordstrength/actions/workflows/meta.yml/badge.svg)](https://github.com/mamico/pas.plugins.passwordstrength/actions/workflows/meta.yml)
+![Code Style](https://img.shields.io/badge/Code%20Style-Black-000000)
 
-[![Egg Status](https://img.shields.io/pypi/status/pas.plugins.passwordstrength.svg)](https://pypi.python.org/pypi/pas.plugins.passwordstrength)
-
-![image](https://img.shields.io/pypi/pyversions/pas.plugins.passwordstrength.svg?style=plastic%20%20%20:alt:%20Supported%20-%20Python%20Versions)
-
-[![License](https://img.shields.io/pypi/l/pas.plugins.passwordstrength.svg)](https://pypi.python.org/pypi/pas.plugins.passwordstrength/)
+[![GitHub contributors](https://img.shields.io/github/contributors/mamico/pas.plugins.passwordstrength)](https://github.com/mamico/pas.plugins.passwordstrength)
+[![GitHub Repo stars](https://img.shields.io/github/stars/mamico/pas.plugins.passwordstrength?style=social)](https://github.com/mamico/pas.plugins.passwordstrength)
 
 # pas.plugins.passwordstrength
 
@@ -72,9 +73,9 @@ Put your name here, you deserve it!
 ## Contribute
 
 -   Issue Tracker:
-    <https://github.com/collective/pas.plugins.passwordstrength/issues>
+    <https://github.com/mamico/pas.plugins.passwordstrength/issues>
 -   Source Code:
-    <https://github.com/collective/pas.plugins.passwordstrength>
+    <https://github.com/mamico/pas.plugins.passwordstrength>
 -   Documentation: <https://docs.plone.org/foo/bar>
 
 ## Support
