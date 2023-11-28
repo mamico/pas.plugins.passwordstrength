@@ -11,3 +11,7 @@ class TestFunctionalPlugin:
         plugin = getattr(pas, PLUGIN_ID)
         self.portal_url = api.portal.get().absolute_url()
         self.plugin_url = plugin.absolute_url()
+
+    # must_change_password
+    # login
+    #  ...

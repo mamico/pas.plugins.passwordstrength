@@ -35,28 +35,9 @@ def post_install(context):
     if not isinstance(plugin, PasswordStrength):
         raise ValueError(f"Existing PAS plugin {PLUGIN_ID} is not a PasswordStrength.")
 
-    # Activate all supported interfaces for this plugin.
-    activate = []
-    plugins = pas.plugins
-    for info in plugins.listPluginTypeInfo():
-        interface = info["interface"]
-        interface_name = info["id"]
-        if plugin.testImplements(interface):
-            activate.append(interface_name)
-            logger.info(f"Activating interface {interface_name} for plugin {PLUGIN_ID}")
-
-    plugin.manage_activateInterfaces(activate)
-    logger.info("Plugins activated.")
-
-    # Order some plugins to make sure our plugin is at the top.
-    # This is not needed for all plugin interfaces.
-    # for info in plugins.listPluginTypeInfo():
-    #     interface_name = info["id"]
-    #     if interface_name in ("IChallengePlugin", "IPropertiesPlugin"):
-    #         iface = plugins._getInterfaceFromName(interface_name)
-    #         plugins.movePluginsTop(iface, [PLUGIN_ID])
-    #         logger.info(f"Moved {PLUGIN_ID} to top of {interface_name}.")
-
+    activate_challenge_plugin(context)
+    activate_validation_plugin(context)
+    
     return plugin
 
 
@@ -89,8 +70,8 @@ def activate_challenge_plugin(context):
     activate_plugin(context, "IChallengePlugin", move_to_top=True)
 
 
-def activate_properties_plugin(context):
-    activate_plugin(context, "IPropertiesPlugin", move_to_top=True)
+def activate_validation_plugin(context):
+    activate_plugin(context, "IValidationPlugin", move_to_top=True)
 
 
 def uninstall(context):
